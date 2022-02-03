@@ -1,0 +1,44 @@
+C. Perform testing of hypothesis using paired t-test. The paired sample t-test is also called dependent sample t-test. It’s an univariate test that
+tests for a significant difference between 2 related variables. An example of this is if you
+where to collect the blood pressure for an individual before and after some treatment,
+condition, or time point. The data set contains blood pressure readings before and after
+an intervention. These are variables “bp_before” and “bp_after”.
+The hypothesis being test is:
+• H0 - The mean difference between sample 1 and sample 2 is equal to 0.
+• H0 - The mean difference between sample 1 and sample 2 is not equal to 0
+Program Code:
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec 16 19:49:23 2019
+@author: MyHome
+"""
+from scipy import stats
+import matplotlib.pyplot as plt
+import pandas as pd
+df = pd.read_csv("blood_pressure.csv")
+print(df[['bp_before','bp_after']].describe())
+#First let’s check for any significant outliers in
+#each of the variables.
+df[['bp_before', 'bp_after']].plot(kind='box')
+# This saves the plot as a png file
+plt.savefig('boxplot_outliers.png')
+# make a histogram to differences between the two scores.
+df['bp_difference'] = df['bp_before'] - df['bp_after']
+df['bp_difference'].plot(kind='hist', title= 'Blood Pressure Difference Histogram')
+#Again, this saves the plot as a png file
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+20
+plt.savefig('blood pressure difference histogram.png')
+stats.probplot(df['bp_difference'], plot= plt)
+plt.title('Blood pressure Difference Q-Q Plot')
+plt.savefig('blood pressure difference qq plot.png')
+stats.shapiro(df['bp_difference'])
+stats.ttest_rel(df['bp_before'], df['bp_after'])
+Output:
+
+A paired sample t-test was used to analyze the blood pressure before and after the
+intervention to test if the intervention had a significant affect on the blood pressure. The
+blood pressure before the intervention was higher (156.45 ± 11.39 units) compared to
+the blood pressure post intervention (151.36 ± 14.18 units); there was a statistically
+significant decrease in blood pressure (t(119)=3.34, p= 0.0011) of 5.09 units.
