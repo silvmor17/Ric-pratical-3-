@@ -1,0 +1,102 @@
+A. Design a survey form for a given case study, collect the primary data and analyse it
+Case 1:
+A researcher wants to conduct a Survey in colleges on Use of ICT in higher education
+from Mumbai, Thane and Navi Mumbai. The survey focuses on access to and use of ICT
+in teaching and learning, as well as on attitudes towards the use of ICT in teaching and
+learning.
+Design questionnaire addressed to teachers seeks information about the target class, his
+experience using ICT for teaching, access to ICT infrastructure, support available, ICT
+based activities and material used, obstacles to the use of ICT in teaching, learning
+activities with the target class, your skills and attitudes to ICT, and some personal
+background information.
+Arrange question in following groups:
+1. Information about the target class you teach
+2. Experience with ICT for teaching
+3. ICT access for teaching
+4. Support to teachers for ICT use
+5. ICT based activities and material used for teaching
+6. Obstacles to using ICT in teaching and learning
+7. Learning activities with the target class
+8. Teacher skills
+9. Teacher opinions and attitudes
+10. Personal background information
+Case 2:
+A research agency wants to study the perception about App based taxi service in
+Mumbai, Thane and Navi Mumbai. The survey focuses on customers attitude towards
+app base taxi service as well as on attitudes towards regular taxi cab.
+Design questionnaire seeks information about the target taxi service, his experience
+using taxi services, access, support available, obstacles and some personal background
+information, with the following objectives:
+1. To find out the customer satisfaction towards the App based-taxi services.
+2. To find the level of convenience and comfort with App based -taxi
+services.
+3. To know their opinion about the tariff system and promptness of service.
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+9
+4. To ascertain the customer view towards the driver behaviour and courtesy.
+5. To provide inputs to enhance the services to delight the customers.
+6. To examine relationship between service quality factors and taxi
+passenger satisfaction.
+7. To suggest better regulations for transportation authorities regarding
+customer protection and effective monitoring of taxi services.
+Case 3:
+A popular electronic store want to conduct a survey to develop awareness of branded
+laptop baseline estimates and determine popularity of different company’s laptop. It
+suggests steps to be initiated or strengthened in the field of demand in a region. The key
+indicators are among the general population, demand branded laptop and the problem
+users.
+The objectives of this particular study are:-
+1. To know the preferences of different types of branded laptops by students and
+professionals.
+2. To study which factor influence for choosing different types of branded
+laptops.
+3. To know about the level of satisfaction towards different types of branded
+laptops.
+4. To identify the perception of consumers towards the laptop positioning
+strategy.
+5. To know the consumer preference towards laptop in the present era.
+Use the collected data for analysis.
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+10
+B. Perform analysis of given secondary data.
+Steps in Secondary Data Analysis
+1. Determine your research question – Knowing exactly what you are looking for.
+2. Locating data– Knowing what is out there and whether you can gain access to it.
+A quick Internet search, possibly with the help of a librarian, will reveal a wealth
+of options.
+3. Evaluating relevance of the data – Considering things like the data’s original
+purpose, when it was collected, population, sampling strategy/sample, data
+collection protocols, operationalization of concepts, questions asked, and
+form/shape of the data.
+4. Assessing credibility of the data – Establishing the credentials of the original
+researchers, searching for full explication of methods including any problems
+encountered, determining how consistent the data is with data from other sources,
+and discovering whether the data has been used in any credible published research.
+5. Analysis – This will generally involve a range of statistical processes.
+Example: Analyze the given Population Census Data for Planning and Decision
+Making by using the size and composition of populations.
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+11
+Put the cursor in cell B22 and click on the AutoSum and then click Enter. This will
+calculate the total population. Then copy the formula in cell D22 across the row 22.
+To calculate the percent of males in cell E4, enter the formula =-1*100*B4/$D$22 .
+And copy the formula in cell E4 down to cell E21.
+To calculate the percent of females in cell F4, enter the formula =100*C4/$D$22.
+Copy the formula in cell F4 down to cell F21.
+To build the population pyramid, we need to choose a horizontal bar chart with two
+series of data (% male and % female) and the age labels in column A as the Category
+X-axis labels. Highlight the range A3:A21, hold down the CTRL key and highlight the
+range E3:F21 
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+12
+Under inset tab, under horizontal bar charts select clustered bar chart
+Put the tip of your mouse arrow on the Y-axis (vertical axis) so it says “Category
+Axis”, right click and chose Format Axis
+Choose Axis options tab and set the major and minor tick mark type to None, Axis
+labels to Low, and click OK.
+Click on any of the bars in your pyramid, click right and select “format data series”.
+Set the Overlap to 100 and Gap Width to 0. Click OK. 
