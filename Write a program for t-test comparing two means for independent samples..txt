@@ -1,0 +1,80 @@
+B. Write a program for t-test comparing two means for independent samples.
+The t distribution provides a good way to perform one sample tests on the mean when
+the population variance is not known provided the population is normal or the sample
+is sufficiently large so that the Central Limit Theorem applies.
+Two Sample t Test
+Example: A college Princiapal informed classroom teachers that some of their students
+showedunusual potential for intellectual gains. One months later the students identified
+to teachers ashaving potentional for unusual intellectual gains showed significiantly
+greater gains performanceon a test said to measure IQ than did students who were not so
+identified. Below are the data forthe students:
+Experimental Comparison
+35 2
+40 27
+12 38
+15 31
+21 1
+14 19
+46 1
+10 34
+28 3
+48 1
+16 2
+30 3
+32 2
+48 1
+31 2
+22 1
+12 3
+39 29
+19 37
+25 2
+27.15 11.95 Mean
+12.51 14.61 Sd
+Experimental Data
+To calculate Standard Mean go to cell A22 and type =SUM(A2:A21)/20
+To calculate Standard Deviation go to cell A23 and type =STDEV(A2:A21)
+Comparison Data
+To calculate Standard Mean go to cell B22 and type =SUM(B2:B21)/20
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+15
+To calculate Standard Deviation go to cell B23 and type =STDEV(B2:B21)
+To find T-Test Statistics go to data Data Analysis
+To caluculate the T-Test square value go to cell E20 and type
+=(A22-B22)/SQRT((A23*A23)/COUNT(A2:A21)+(B23*B23)/COUNT(A2:A21))
+Now go to cell E20 and type
+=IF(E20<E12,"H0 is Accepted", "H0 is Rejected and H1 is Accepted")
+Our calculated value is larger than the tabled value at alpha = .01, so we reject the null
+hypothesisand accept the alternative hypothesis, namely, that the difference in gain
+scores is likely the resultof the experimental treatment and not the result of chance
+variation.
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+16
+Output:
+
+
+Using Python
+importnumpy as np
+fromscipy import stats
+fromnumpy.random import randn
+N = 20
+#a = [35,40,12,15,21,14,46,10,28,48,16,30, 32,48,31,22,12,39,19,25]
+#b = [2,27,31,38,1,19,1,34,3,1,2,1,3,1,2,1,3,29,37,2]
+a = 5 * randn(100) + 50
+b = 5 * randn(100) + 51
+var_a = a.var(ddof=1)
+var_b = b.var(ddof=1)
+s = np.sqrt((var_a + var_b)/2)
+t = (a.mean() - b.mean())/(s*np.sqrt(2/N))
+df = 2*N - 2
+#p-value after comparison with the t
+p = 1 - stats.t.cdf(t,df=df)
+print("t = " + str(t))
+print("p = " + str(2*p))
+if t> p :
+print('Mean of two distribution are differnt and significant')
+else:
+print('Mean of two distribution are same and not significant')
+Output:
